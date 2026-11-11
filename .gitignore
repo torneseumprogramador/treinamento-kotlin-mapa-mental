@@ -1,0 +1,35 @@
+# Sistema
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Obsidian — estado local do app (mantém o vault portátil)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
+.obsidian/cache
+.obsidian/plugins/*/data.json
+.trash/
+
+# IDEs / editores
+.idea/
+*.iml
+.vscode/
+*.code-workspace
+
+# Kotlin / JVM (caso apareçam builds locais)
+*.class
+*.jar
+*.war
+*.ear
+*.kt~
+.gradle/
+build/
+out/
+.kotlin/
+
+# Ambiente
+.env
+.env.*
+!.env.example
