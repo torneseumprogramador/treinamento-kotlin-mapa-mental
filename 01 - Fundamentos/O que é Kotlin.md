@@ -32,13 +32,13 @@ tags:
 
 ## Kotlin vs Java (visão rápida)
 
-| Aspecto | Kotlin | Java |
-|---------|--------|------|
-| Null | Tratado no tipo (`String?`) | Frequentemente `NullPointerException` |
-| Verbosity | Mais curto | Mais verboso |
-| Classes de dados | `data class` nativo | Precisa gerar equals/hashCode/toString |
-| Funções | Cidadãs de primeira classe | Lambdas limitadas (pré-8) / mais verbosas |
-| Herança | Classes `final` por padrão | Classes abertas por padrão |
+| Aspecto          | Kotlin                      | Java                                      |
+| ---------------- | --------------------------- | ----------------------------------------- |
+| Null             | Tratado no tipo (`String?`) | Frequentemente `NullPointerException`     |
+| Verbosity        | Mais curto                  | Mais verboso                              |
+| Classes de dados | `data class` nativo         | Precisa gerar equals/hashCode/toString    |
+| Funções          | Cidadãs de primeira classe  | Lambdas limitadas (pré-8) / mais verbosas |
+| Herança          | Classes `final` por padrão  | Classes abertas por padrão                |
 
 ## História rápida
 
