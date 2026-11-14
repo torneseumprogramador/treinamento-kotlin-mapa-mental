@@ -4,6 +4,8 @@ Thumbs.db
 *.swp
 *~
 
+*.jar
+
 # Obsidian — estado local do app (mantém o vault portátil)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
@@ -28,6 +30,11 @@ Thumbs.db
 build/
 out/
 .kotlin/
+
+# Kotlin/Native
+*.kexe
+*.exe
+*.dSYM/
 
 # Ambiente
 .env

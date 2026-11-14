@@ -11,15 +11,85 @@ tags:
 
 ## Compilador e runtime
 
+| Comando                                          | O que faz                              |
+| ------------------------------------------------ | -------------------------------------- |
+| `kotlinc arquivo.kt`                             | Compila para `.class` (JVM)            |
+| `kotlinc arquivo.kt -d app.jar`                  | Compila gerando JAR                    |
+| `kotlinc arquivo.kt -include-runtime -d app.jar` | JAR executável (inclui runtime Kotlin) |
+| `kotlin ArquivoKt`                               | Executa classe compilada               |
+| `java -jar app.jar`                              | Executa JAR                            |
+| `kotlinc -script script.kts`                     | Roda script Kotlin                     |
+| `kotlinc -version`                               | Mostra versão do compilador            |
+
+## Scripts prontos (`Codigos/`)
+
+```bash
+cd Codigos
+./rodar-script.sh          # .kts (script)
+./rodar-jvm.sh um dois tres  # .kt → JAR + java
+./rodar-native.sh          # .kt → binário nativo (precisa Xcode no macOS)
+```
+
+| Script | Arquivo | Tipo |
+|--------|---------|------|
+| `rodar-script.sh` | `arquivo.kts` | Script |
+| `rodar-jvm.sh` | `arquivo.kt` | JVM (JAR) |
+| `rodar-native.sh` | `HelloNative.kt` | Native |
+
+## Kotlin/Native (sem JVM)
+
+O `kotlinc` normal gera bytecode para a **JVM**. Para binário nativo do SO use **`kotlinc-native`**.
+
+### Pré-requisitos (macOS)
+
+1. **Xcode completo** (App Store) — só Command Line Tools **não basta**; o Native chama `xcodebuild`
+2. Compilador Native:
+
+```bash
+brew install --cask kotlin-native
+```
+
+Se o macOS bloquear libs baixadas (quarantine):
+
+```bash
+xattr -dr com.apple.quarantine "$(brew --prefix)/Caskroom/kotlin-native"
+```
+
+### Compilar e rodar
+
+Arquivo de exemplo: `Codigos/HelloNative.kt`
+
+```kotlin
+fun main() {
+    println("Hello, Kotlin/Native!")
+}
+```
+
+```bash
+cd Codigos
+kotlinc-native HelloNative.kt -o HelloNative
+./HelloNative.kexe
+```
+
 | Comando | O que faz |
 |---------|-----------|
-| `kotlinc arquivo.kt` | Compila para `.class` (JVM) |
-| `kotlinc arquivo.kt -d app.jar` | Compila gerando JAR |
-| `kotlinc arquivo.kt -include-runtime -d app.jar` | JAR executável (inclui runtime Kotlin) |
-| `kotlin ArquivoKt` | Executa classe compilada |
-| `java -jar app.jar` | Executa JAR |
-| `kotlinc -script script.kts` | Roda script Kotlin |
-| `kotlinc -version` | Mostra versão do compilador |
+| `kotlinc-native HelloNative.kt -o HelloNative` | Gera `HelloNative.kexe` (macOS/Linux) |
+| `./HelloNative.kexe` | Roda o binário **sem** JVM |
+| `kotlinc-native HelloNative.kt -o HelloNative -opt` | Build otimizado (compila mais lento) |
+
+> A **primeira** compilação demora: baixa LLVM para `~/.konan` (só uma vez).
+
+### JVM vs Native (mesmo código)
+
+```bash
+# JVM — precisa de java
+kotlinc HelloNative.kt -include-runtime -d HelloNative.jar
+java -jar HelloNative.jar
+
+# Native — executável direto no SO
+kotlinc-native HelloNative.kt -o HelloNative
+./HelloNative.kexe
+```
 
 ## REPL (terminal interativo)
 
