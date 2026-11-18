@@ -11,14 +11,14 @@ tags:
 
 ## Tipos numéricos
 
-| Tipo | Bits | Exemplo |
-|------|------|---------|
-| `Byte` | 8 | `1` |
-| `Short` | 16 | `100` |
-| `Int` | 32 | `42` |
-| `Long` | 64 | `42L` |
-| `Float` | 32 | `3.14f` |
-| `Double` | 64 | `3.14` |
+| Tipo     | Bits | Exemplo |
+| -------- | ---- | ------- |
+| `Byte`   | 8    | `1`     |
+| `Short`  | 16   | `100`   |
+| `Int`    | 32   | `42`    |
+| `Long`   | 64   | `42L`   |
+| `Float`  | 32   | `3.14f` |
+| `Double` | 64   | `3.14`  |
 
 ```kotlin
 val inteiro: Int = 10
@@ -54,11 +54,11 @@ val bloqueado = false
 
 ## Any, Unit, Nothing
 
-| Tipo | Significado |
-|------|-------------|
-| `Any` | Superclasse de todos os tipos não-nulos (como `Object` em Java) |
-| `Unit` | “Sem retorno útil” (como `void`) |
-| `Nothing` | Função que nunca retorna (ex.: lança exceção) |
+| Tipo      | Significado                                                     |
+| --------- | --------------------------------------------------------------- |
+| `Any`     | Superclasse de todos os tipos não-nulos (como `Object` em Java) |
+| `Unit`    | “Sem retorno útil” (como `void`)                                |
+| `Nothing` | Função que nunca retorna (ex.: lança exceção)                   |
 
 ```kotlin
 fun log(msg: String): Unit {
@@ -110,3 +110,7 @@ Tipos Kotlin
 ├── Any / Unit / Nothing
 └── Anuláveis: Tipo?
 ```
+
+## Exercícios
+
+Pratique em [[Exercicios - Variaveis e Tipos]] (`Codigos/Exercicio/`).

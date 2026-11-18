@@ -106,13 +106,13 @@ Saia com `:quit`.
 
 ## Gradle (projetos)
 
-| Comando | O que faz |
-|---------|-----------|
-| `./gradlew build` | Compila e empacota |
-| `./gradlew run` | Executa a aplicação |
-| `./gradlew test` | Roda testes |
-| `./gradlew clean` | Limpa build |
-| `./gradlew dependencies` | Lista dependências |
+| Comando                  | O que faz           |
+| ------------------------ | ------------------- |
+| `./gradlew build`        | Compila e empacota  |
+| `./gradlew run`          | Executa a aplicação |
+| `./gradlew test`         | Roda testes         |
+| `./gradlew clean`        | Limpa build         |
+| `./gradlew dependencies` | Lista dependências  |
 
 ## Estrutura mínima de um arquivo `.kt`
 

@@ -53,6 +53,7 @@ mindmap
 
 - [[Variáveis]]
 - [[Tipos de dados]]
+- [[Exercicios - Variaveis e Tipos]]
 - [[Operadores]]
 - [[Comentários e estrutura]]
 
