@@ -40,3 +40,6 @@ out/
 .env
 .env.*
 !.env.example
+
+# shim local (se existir)
+.fake-xcode/

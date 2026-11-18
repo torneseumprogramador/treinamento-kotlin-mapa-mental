@@ -42,12 +42,9 @@ O `kotlinc` normal gera bytecode para a **JVM**. Para binário nativo do SO use 
 
 ### Pré-requisitos (macOS)
 
-1. **Xcode completo** (App Store) — só Command Line Tools **não basta**; o Native chama `xcodebuild`
-2. Compilador Native:
-
-```bash
-brew install --cask kotlin-native
-```
+1. Command Line Tools (`xcode-select --install`) **ou** Xcode completo
+2. Compilador Native: `brew install --cask kotlin-native`
+3. Se só tiver CLT (sem Xcode.app), o Kotlin ainda exige `xcodebuild -version` — neste Mac já foi configurado um **shim** mínimo para isso
 
 Se o macOS bloquear libs baixadas (quarantine):
 
