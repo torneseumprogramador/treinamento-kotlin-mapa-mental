@@ -62,6 +62,7 @@ mindmap
 - [[Condicionais]]
 - [[When]]
 - [[Loops]]
+- Exercícios em `Codigos/condicionais_loops/` (3 READMEs)
 
 ## 04 — Funções
 

@@ -23,6 +23,32 @@ for (i in 1..5) {
 1 until 5     // 1,2,3,4
 5 downTo 1    // 5,4,3,2,1
 1..10 step 2  // 1,3,5,7,9
+
+
+fun main() {
+	println("1..5 →")
+	for (i in 1..5) { // 1,2,3,4,5
+		println(i)
+	}
+
+	println("\n1 until 5 →")
+	for (i in 1 until 5) { // 1,2,3,4
+		println(i)
+	}
+	  
+	
+	println("\n5 downTo 1 →")
+	for (i in 5 downTo 1) { // 5,4,3,2,1
+		println(i)
+	}
+	
+	
+	println("\n1..10 step 2 →")
+	for (i in 1..10 step 2) { // 1,3,5,7,9
+		println(i)
+	}
+}
+
 ```
 
 ### Percorrer coleções
