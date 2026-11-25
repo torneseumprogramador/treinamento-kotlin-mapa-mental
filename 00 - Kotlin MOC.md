@@ -68,6 +68,7 @@ mindmap
 
 - [[Funções]]
 - [[Lambda e Higher-Order]]
+- Exercícios em `Codigos/funcoes/exercicios/` (4 enunciados `.md`)
 
 ## 05 — Orientação a Objetos
 
