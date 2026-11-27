@@ -39,22 +39,49 @@ class Conta(val titular: String, saldoInicial: Double) {
 ## Construtor secundário
 
 ```kotlin
-class Usuario(val nome: String) {
-    var email: String = ""
+fun main() {
 
-    constructor(nome: String, email: String) : this(nome) {
-        this.email = email
-    }
+	class Usuario(val nome: String = "") {
+		var email: String = ""
+		var senha: String = ""
+		
+		constructor(nome: String, email: String) : this(nome) {
+			this.email = email
+			println("Construtor secundário chamado")
+		}
+		
+		constructor(nome: String, email: String, senha: String) : this(nome) {
+			this.email = email
+			this.senha = senha
+			println("Construtor terciário chamado")
+		}
+
+	}
+	
+	// val u = Usuario()
+	// val u = Usuario("João")
+	// val u = Usuario("João", "joao@gmail.com")
+	val u = Usuario("João", "joao@gmail.com", "123456")
+	println("Nome: ${u.nome}")
+	println("Email: ${u.email}")
 }
 ```
 
 ## init
 
 ```kotlin
-class Produto(val preco: Double) {
-    init {
-        require(preco >= 0) { "Preço inválido" }
-    }
+fun main() {
+	class Produto(val preco: Double) {
+		init {
+			require(preco >= 0) { "Preço inválido" } // serve como um validador de entrada
+		}
+	}
+
+	val p = Produto(100.0)
+	println("Preço: ${p.preco}")
+	
+	val p2 = Produto(-100.0) // erro de compilação
+	println("Preço: ${p2.preco}")
 }
 ```
 
@@ -95,9 +122,12 @@ enum class Status {
 
 ```kotlin
 class Retangulo(val largura: Int, val altura: Int) {
-    val area: Int
-        get() = largura * altura
+	val area: Int
+	get() = largura * altura // propriedade que já devolve calculada
 }
+  
+val r = Retangulo(10, 20)
+println("Área: ${r.area}")
 ```
 
 ## Mapa mental OOP Kotlin
@@ -111,6 +141,15 @@ Classes
 ├── object / companion object
 └── enum / data / sealed (ver outras notas)
 ```
+
+## Exercícios
+
+Enunciados em `Codigos/orientacao_objetos/exercicios/`:
+
+1. Conta bancária — `private set` + métodos  
+2. Cadastro de usuário — construtor secundário + `init`  
+3. Pedido da loja — `enum` + `object` + `get`  
+4. Factory de retângulo — `companion object`
 
 ## Próximos
 

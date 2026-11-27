@@ -76,6 +76,7 @@ mindmap
 - [[Herança]]
 - [[Interfaces]]
 - [[Data Classes]]
+- Exercícios em `Codigos/orientacao_objetos/exercicios/` (4 enunciados `.md`)
 
 ## 06 — Null Safety
 
